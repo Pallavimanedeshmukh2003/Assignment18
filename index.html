@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+   <style>
+  body{
+    margin: 0;
+    padding: 0;
+  }
+    .nav{
+     background-color: #33ffad;
+     color:#f80199;
+     padding: 10px;
+     width: 100%;
+     top: 0;
+     text-align: center;
+     position: fixed;
+     display: flex;
+     z-index: 100;
+    }
+    .clg-event{
+    margin-top: 80px;
+    color: #f80199;
+}
+   .event{
+   margin-left: 600px;
+}
+.search{
+   margin-left: 500px;
+}
+
+    .container{
+        height: 450px;
+        width: 700px;
+        border-radius: 60px;
+        display: flex;
+        flex-direction: row;
+       padding: 80px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        
+    }
+    .event-sport{
+        
+        border-radius: 20px;
+        width: 40%;
+        height: 400px;
+        border:3px solid rgb(167, 137, 143) ;
+        box-shadow: 0  0 10px 3px #371414;
+        border-right: none;
+        padding-left: 40px;
+        background-color: #ccffcc;
+        margin: 30px;
+        margin-top: 60px;
+    }
+    .event-dance{
+     background-color:#ccffcc ;
+      border-radius: 20px;
+      width: 40% ;
+      border:3px solid rgb(167, 137, 143) ;
+      box-shadow: 0  0 10px 3px #371414;
+      border-left: solid;
+      padding-left: 40px;
+      font-size: 30px;
+      margin-top: 60px;
+     
+    }
+   .clg-name{
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     padding-left: 0px;
+     color: #990000;
+     font-size: 30px;
+     
+   }
+  .program{
+        font-size: 20px;
+        color: #ff3333;
+     }
+     .event-logo{
+        height: 90px;
+        padding-top: 0px;
+       padding-left: 0px;
+       padding-block-start: 9%;
+     }
+     .sport{
+        height: 100px;
+
+     }
+     .dancing{
+        height: 100px;
+     }
+     .home{
+    height: 50px;
+    display: flex;
+    color: black;
+   }
+     .menu-item{
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+    margin: 0 20px;
+    padding: 50px;
+   }
+   .menu-item:hover{
+      text-decoration: underline;
+   }
+   .hamburger{
+  height: 50px;
+  display: none;
+   }
+    /*mobile */
+    @media screen and   (max-width: 500px){
+      .nav
+      {
+        
+      }
+       .container
+       {
+         flex-direction: column;
+         height: 750px;
+        width: 200px;
+         margin-right: 30px;
+        
+       
+       }
+       .event-sport
+       {
+        width: 250px;
+        height: 400px;
+        margin-top: 10px;
+        padding-left: 5px;
+        margin: 0;
+        margin-right: 80px;
+        margin-bottom: 20px;
+       
+       
+       
+       }
+       .event-dance
+       {
+        width: 250px;
+        height: 400px;
+        margin-top: 10px;
+        padding-left: 5px;
+        margin: 0px;
+        margin-right: 80px;
+
+       
+       
+       }
+       .date-time
+       {
+        flex-wrap: wrap;
+       }
+       .menu-item{
+         display: none;
+         
+       }
+       .hamburger{
+         display: block;
+         margin-left: 120px;
+         
+       }
+    }
+    /*tablet*/
+    @media screen and (min-width:501px)and (max-width:800px){
+        .container{
+           width: 510px;
+        }
+        .event-sport{
+            width: 500px;
+            height: 500px;
+ }
+        .event-dance{
+            width: 500px;
+            height: 500px;
+              }
+}
+     .date-time{
+       font-size: 10px;
+       color: #f80199;
+       }
+   .team{
+    padding-left: 40px;
+    height: 100px;
+   }
+   .home{
+    height: 50px;
+    display: flex;
+    color: black;
+   }
+  
+   
+   
+   </style>
+</head>
+<body>
+
+  <div class="nav">
+   <div class="home"> 
+      <img src="./home.png" class="home">
+      <h2>collage event</h2>
+   </div>
+<div class="menu">
+   <a href="#" class="menu-item">Home </a>
+   <a href="#" class="menu-item">Event</a>
+   <a href="#"  class="menu-item">Contact</a>
+   
+</div>
+<img src="./hamburger.png" class="hamburger">
+    </div>
+  
+  <div class="container">
+   <br><br>
+  <div class="event-sport">
+    <img src="./collagelogo.jpg" class="event-logo">
+    <span class="clg-name">SMSMPITR,Akluj</span>
+    <p class="program">Event:Sport Competition</p>
+    <img src="./sports.png" class="sport">
+    <img src="./team.png"  class="team">
+    <form class="date-time">
+        Date:<input type="date" /> <br>
+       Time: <input type="time" />
+      </form>
+  </div>
+  <div class="event-dance">
+     <img src="./collagelogo.jpg" class="event-logo">
+     <span class="clg-name">SMSMPITR,Akluj</span>
+     <p class="program">Event:Dance Competition</p>
+     <img src="./dancing.png" class="dancing">
+     <img src="./team.png"  class="team">
+     <form class="date-time">
+        Date:<input type="date" /> <br>
+       Time: <input type="time" />
+      </form>
+</div>
+</div>
+</body>
+</html>
